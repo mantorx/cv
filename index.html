@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -19,14 +19,11 @@
       --soft-light: #555;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       transition: background 0.4s, color 0.4s;
+      scroll-behavior: smooth;
     }
 
     body.light {
@@ -190,20 +187,13 @@
 
     .fade-in {
       opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-in-out;
+      transform: translateY(30px);
+      transition: all 1s ease;
     }
 
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
-    }
-
-    .hashtags {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
-      color: var(--soft-dark);
     }
 
     @media (max-width: 600px) {
@@ -216,7 +206,7 @@
 
 <body class="dark">
   <nav id="navbar">
-    <h1>Data Lead Specialist</h1>
+    <h1>Arthur Mbomo - Data Lead Specialist</h1>
     <div class="nav-buttons">
       <button onclick="toggleTheme()">Toggle Theme</button>
       <button onclick="window.print()">Export PDF</button>
@@ -225,7 +215,7 @@
 
   <div class="container">
     <header>
-      <img src="photo de profil.jpeg" alt="Photo de profil" class="profile-pic" />
+      <img src="photo-de-profil.jpeg" alt="Photo de profil" class="profile-pic" />
       <div class="soft-skills">
         <span>Teamwork</span>
         <span>Under pressure</span>
@@ -248,79 +238,16 @@
     </div>
 
     <section class="fade-in">
-      <h2>Professional Experiences</h2>
-      <h3>Data Quality Project Leader – MSF Supply</h3>
-      <p>June 2023 – Present</p>
-      <ul>
-        <li>Implementing a Data Governance Strategy</li>
-        <li>Creation of dashboards via POWER BI in close collaboration with IT...</li>
-        <li>Analysis of API integration projects on our information systems..</li>
-        <li>Implementation of data quality control and monitoring tools...</li>
-        <li>Data mapping and implementation of data quality qualification and remediation processes...</li>
-        <li>Follow-up and support for top managers, providing solid insights for sound decision-making...</li>
-      </ul>
-
-      <h3>Master Data Analyst – FOD Economie</h3>
-      <p>March 2023 – June 2023</p>
-      <ul>
-        <li>Make sure premium data is well encoded in our Data management software...</li>
-        <li>Play a key role beetween IT & Data stewards team...</li>
-        <li>Updating the database and monitoring the progress of the files...</li>
-        <li>Providing daily and/or weekly statistics to management using the tools provided...</li>
-      </ul>
-
-      <h3>Master Data Analyst – UCB</h3>
-      <p>October 2022 – January 2023</p>
-      <ul>
-        <li>Warehouse data management via SAP BI...</li>
-        <li>Analysis of digital integration project for warehouse receiving control sheets via SAP BI...</li>
-      </ul>
+      <h2>About Me</h2>
+      <p>
+        I'm a specialist combining the roles of data analyst and business analyst, with a passion for data governance. My aim is to design tailor-made solutions, perfectly adapted to real-life business issues. Thanks to my mastery of frameworks such as DAMA and DMBOK, I can structure data management processes while ensuring their quality and optimal exploitation. I have developed solid skills in implementing ETL pipelines (Airflow, Metabase, SQL), processing large volumes of data with PySpark (RDD and DataFrames) and using tools such as Power BI, Tableau and Excel to create interactive and dynamic visualizations. I combine this technical expertise with strategic capability, exploiting artificial intelligence and machine learning (TensorFlow) to optimize data-driven decision-making. I have also led complex projects, such as data migration and modeling, as well as the development of automated dashboards aimed at improving data quality and operational performance. This dual role enables me to combine an understanding of business issues with cutting-edge technical skills, and to offer organizations innovative, high-impact solutions.
+      </p>
     </section>
+
+    <!-- Autres sections ici comme expériences, formations, skills... -->
 
     <section class="fade-in">
-      <h2>Education</h2>
-      <h3>Jedha Bootcamp - Data Lead Program</h3>
-      <p>February 2025 – May 2025</p>
-      <ul>
-        <li>Data governance according to DAMA DMBOK</li>
-        <li>Design of robust, tailored data governance frameworks</li>
-        <li>Data pipeline construction</li>
-        <li>Data model structuring</li>
-      </ul>
-
-      <h3>EPHEC - Bachelor of specialization in Business Data Analysis</h3>
-      <p>Sept. 2021 – Sept. 2022</p>
-      <ul>
-        <li>SQL Data Modelling, Data Warehousing</li>
-        <li>Power BI, Excel, Qliksense</li>
-        <li>Python, R, Pandas, Scikit-learn</li>
-        <li>Data protection, project management</li>
-      </ul>
-
-      <h3>EPHEC - Bachelor in E-business, Business Analysis option</h3>
-      <p>2017 – 2021</p>
-      <ul>
-        <li>Graduated with jury's satisfaction</li>
-        <li>Project management</li>
-      </ul>
-    </section>
-
-    <section class="fade-in">
-      <h2>Technical Skills & Tools</h2>
-      <div>
-        <span class="badge">Python</span>
-        <span class="badge">SQL</span>
-        <span class="badge">Power BI</span>
-        <span class="badge">Tableau</span>
-        <span class="badge">Metabase</span>
-        <span class="badge">Excel</span>
-        <span class="badge">ETL (Airflow, Databricks)</span>
-        <span class="badge">Machine Learning</span>
-      </div>
-    </section>
-
-    <section class="hashtags fade-in">
-      #DataGovernance #BusinessAnalysis #PowerBI #ETL #Python #MachineLearning #SQL #DataQuality #Analytics #DataModeling
+      <h2>#DataAnalysis #DataGovernance #Python #SQL #BI #ETL #MachineLearning #DAMA #DMBOK #TensorFlow #PowerBI #Airflow</h2>
     </section>
   </div>
 
@@ -333,19 +260,18 @@
       nav.classList.toggle("light");
     }
 
-    const faders = document.querySelectorAll(".fade-in");
-    const appearOptions = { threshold: 0.2 };
-
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    // Intersection observer for animations
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
         }
       });
-    }, appearOptions);
+    }, { threshold: 0.1 });
 
-    faders.forEach(fader => appearOnScroll.observe(fader));
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
 
