@@ -2,150 +2,325 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV d'Arthur Mbomo - BI Developer Specialist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000; /* Fond noir */
-            color: #fff;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arthur Mbomo - BI Developer Specialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0a0f24;
+      --bg-light: #f4f4f4;
+      --card-dark: #1f2a44;
+      --card-light: #fff;
+      --text-dark: #f3f3f3;
+      --text-light: #222;
+      --accent: #cba135;
+      --soft-dark: #9aa0b3;
+      --soft-light: #555;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #222; /* Un contraste subtil pour la lisibilité */
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-        }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      transition: background 0.4s, color 0.4s;
+    }
 
-        h1 {
-            color: #4A90E2;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+    body.light {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
 
-        .contact-info {
-            font-size: 16px;
-            color: #bbb; /* Plus doux pour un contraste visuel */
-            text-align: right;
-            margin-bottom: 20px;
-        }
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
 
-        a {
-            color: #4A90E2;
-            text-decoration: none;
-        }
+    header,
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
 
-        h2 {
-            color: #4A90E2;
-            border-bottom: 2px solid #4A90E2;
-            padding-bottom: 5px;
-            font-size: 24px;
-            margin-top: 30px;
-        }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: var(--card-dark);
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+      border-bottom: 1px solid var(--accent);
+    }
 
-        .profile-pic {
-            display: block;
-            width: 150px;
-            height: 150px;
-            margin: 10px auto;
-            border-radius: 50%;
-            border: 3px solid #4A90E2;
-            object-fit: cover;
-        }
+    nav.light {
+      background-color: var(--card-light);
+      color: var(--text-light);
+    }
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
+    nav h1 {
+      font-size: 20px;
+      margin: 0;
+    }
 
-        .badge {
-            display: inline-block;
-            background: #4A90E2;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 15px;
-            margin: 5px;
-            font-size: 14px;
-        }
+    .nav-buttons button {
+      background: var(--accent);
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 5px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
 
-        .linkedin {
-            display: inline-block;
-            background: #0077B5;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
+    .container {
+      background-color: var(--card-dark);
+      border-radius: 16px;
+      padding: 30px;
+      margin-top: 20px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+    }
 
-        .linkedin:hover {
-            background: #005582;
-        }
-    </style>
+    body.light .container {
+      background-color: var(--card-light);
+      color: var(--text-light);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--accent);
+      font-size: 36px;
+    }
+
+    .soft-skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--soft-dark);
+    }
+
+    body.light .soft-skills {
+      color: var(--soft-light);
+    }
+
+    .soft-skills span {
+      background-color: #2a3553;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    body.light .soft-skills span {
+      background-color: #e0e0e0;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin: 20px auto;
+      display: block;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .linkedin {
+      background-color: #0077b5;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      color: white;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .linkedin:hover {
+      background-color: #005582;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      background: var(--accent);
+      color: var(--bg-dark);
+      padding: 5px 12px;
+      border-radius: 15px;
+      margin: 5px;
+      font-size: 13px;
+      display: inline-block;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media print {
+      nav,
+      .nav-buttons {
+        display: none;
+      }
+
+      .container {
+        box-shadow: none;
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 
-<body>
-    <div class="container">
-        <h1>Arthur Mbomo</h1>
-        <img src="photo de profil.jpeg" alt="Photo de profil d'Arthur Mbomo" class="profile-pic">
-        <div class="contact-info">
-            <p>Email adress: <a href="mailto:arthursmay@yahoo.fr">arthursmay@yahoo.fr</a><br>
-                Tel number: +32 467 756 284<br>
-                Adress: 1080 Koekelberg, Bruxelles</p>
-            <a href="https://www.linkedin.com/in/arthur-mbomo-02710b137/" class="linkedin">Look at my LinkedIn profile</a>
-        </div>
+<body class="dark">
+  <nav id="navbar">
+    <h1>Arthur Mbomo</h1>
+    <div class="nav-buttons">
+      <button onclick="toggleTheme()">Toggle Theme</button>
+      <button onclick="window.print()">Export PDF</button>
+    </div>
+  </nav>
 
-        <h2>About Arthur</h2>
-        <p>I'm a specialist combining the roles of data analyst and business analyst, with a passion for data governance. My aim is to design tailor-made solutions, perfectly adapted to real-life business issues.
-            Thanks to my mastery of frameworks such as DAMA and DMBOK, I can structure data management processes while ensuring their quality and optimal exploitation. I have developed solid skills in implementing ETL pipelines (Airflow, Metabase, SQL), processing large volumes of data with PySpark (RDD and DataFrames) and using tools such as Power BI, Tableau and Excel to create interactive and dynamic visualizations.
-            I combine this technical expertise with strategic capability, exploiting artificial intelligence and machine learning (TensorFlow) to optimize data-driven decision-making. I have also led complex projects, such as data migration and modeling, as well as the development of automated dashboards aimed at improving data quality and operational performance.
-            This dual role enables me to combine an understanding of business issues with cutting-edge technical skills, and to offer organizations innovative, high-impact solutions.</p>
+  <div class="container">
+    <header>
+      <img src="photo de profil.jpeg" alt="Photo de profil" class="profile-pic" />
+      <div class="soft-skills">
+        <span>Teamwork</span>
+        <span>Under pressure</span>
+        <span>Agile</span>
+        <span>Analytical mindset</span>
+        <span>Attention to detail</span>
+        <span>Continuous learner</span>
+        <span>Adaptability</span>
+        <span>Bilingual: FR/EN</span>
+      </div>
+    </header>
 
-        <h2>Professional experiences</h2>
-        <h3>Data Quality Project Leader</h3>
-        <p><strong>MSF Supply</strong> - June 2023 up today</p>
-        <ul>
-            <li>Implementing a Data Quality Governance Strategy...</li>
-            <li>Creation of dashboards via POWER BI in close collaboration with IT...</li>
-            <li>Analysis of API integration projects on our information systems...</li>
-            <li>Implementation of data quality control and monitoring tools...</li>
-            <li>Data mapping and implementation of data quality qualification and remediation processes...</li>
-            <li>Follow-up and support for top managers, providing solid insights for sound decision-making...</li>
-        </ul>
+    <div class="contact-info">
+      <p>
+        📧 <a href="mailto:arthursmay@yahoo.fr">arthursmay@yahoo.fr</a><br />
+        📞 +32 467 756 284<br />
+        📍 1080 Koekelberg, Brussels
+      </p>
+      <a href="https://www.linkedin.com/in/arthur-mbomo-02710b137/" class="linkedin">Visit my LinkedIn</a>
+    </div>
 
-        <h3>Master Data Analyst & citizens care manager</h3>
-        <p><strong>FOD Economie</strong> - March 2023 to June 2023</p>
-        <ul>
-            <li>Make sure premium data is well encoded in our Data management software...</li>
-            <li>Play a key role beetween IT & Data stewards team... </li>
-            <li>Updating the database and monitoring the progress of the files...</li>
-            <li>Providing daily and/or weekly statistics to management using the tools provided...</li>
-        </ul>
+    <section class="fade-in">
+      <h2>About Me</h2>
+      <p>
+        I am a BI Developer Specialist combining data and business analysis with a solid background in data governance...
+      </p>
+    </section>
 
-        <h3>Master Data Analyst</h3>
-        <p><strong>UCB at Braine l'Alleud</strong> - October 2022 to january 2023</p>
-        <ul>
-            <li>Warehouse data management via SAP BI...</li>
-            <li>Analysis of digital integration project for warehouse receiving control sheets via SAP BI...</li>
-        </ul>
+    <section class="fade-in">
+      <h2>Professional Experiences</h2>
 
-        <h2>technical skills and tools</h2>
+      <h3>Data Quality Project Leader – MSF Supply</h3>
+      <p>June 2023 – Present</p>
+      <ul>
+        <li>Implementing Data Governance Strategy</li>
+        <li>Power BI dashboards, API integrations</li>
+        <li>Data quality control, mapping, remediation</li>
+      </ul>
+
+      <h3>Master Data Analyst – FOD Economie</h3>
+      <p>March 2023 – June 2023</p>
+      <ul>
+        <li>Data validation, update tracking</li>
+        <li>Coordination between IT & Data Stewards</li>
+      </ul>
+
+      <h3>Master Data Analyst – UCB</h3>
+      <p>October 2022 – January 2023</p>
+      <ul>
+        <li>Warehouse data via SAP BI</li>
+        <li>Digital integration analysis</li>
+      </ul>
+    </section>
+
+    <section class="fade-in">
+      <h2>Technical Skills & Tools</h2>
+      <div>
         <span class="badge">Python</span>
         <span class="badge">SQL</span>
+        <span class="badge">Power BI</span>
         <span class="badge">Tableau</span>
         <span class="badge">Metabase</span>
-        <span class="badge">Power BI</span>
         <span class="badge">Excel</span>
         <span class="badge">ETL (Airflow, Databricks)</span>
         <span class="badge">Machine Learning</span>
-    </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Toggle light/dark theme
+    function toggleTheme() {
+      const body = document.body;
+      const nav = document.getElementById("navbar");
+      body.classList.toggle("light");
+      body.classList.toggle("dark");
+      nav.classList.toggle("light");
+    }
+
+    // Animation on scroll
+    const faders = document.querySelectorAll(".fade-in");
+    const appearOptions = { threshold: 0.2 };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
 </body>
 
 </html>
