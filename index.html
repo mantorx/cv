@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arthur Mbomo - BI Developer Specialist</title>
+  <title>Arthur Mbomo - Data Lead Specialist</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -17,6 +17,10 @@
       --accent: #cba135;
       --soft-dark: #9aa0b3;
       --soft-light: #555;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -194,12 +198,25 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    .hashtags {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: var(--soft-dark);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+    }
   </style>
 </head>
 
 <body class="dark">
   <nav id="navbar">
-    <h1>Arthur Mbomo</h1>
+    <h1>Data Lead Specialist</h1>
     <div class="nav-buttons">
       <button onclick="toggleTheme()">Toggle Theme</button>
       <button onclick="window.print()">Export PDF</button>
@@ -210,31 +227,25 @@
     <header>
       <img src="photo de profil.jpeg" alt="Photo de profil" class="profile-pic" />
       <div class="soft-skills">
-        <span>Teamwork</span><span>Under pressure</span><span>Agile</span><span>Analytical mindset</span>
-        <span>Attention to detail</span><span>Continuous learner</span><span>Adaptability</span><span>Bilingual: FR/EN</span>
+        <span>Teamwork</span>
+        <span>Under pressure</span>
+        <span>Agile</span>
+        <span>Analytical mindset</span>
+        <span>Attention to detail</span>
+        <span>Continuous learner</span>
+        <span>Adaptability</span>
+        <span>Bilingual: FR/EN</span>
       </div>
     </header>
 
     <div class="contact-info">
       <p>
-        📧 <a href="mailto:arthursmay@yahoo.fr">arthursmay@yahoo.fr</a><br />📞 +32 467 756 284<br />📍 1080 Koekelberg, Brussels
+        📧 <a href="mailto:arthursmay@yahoo.fr">arthursmay@yahoo.fr</a><br />
+        📞 +32 467 756 284<br />
+        📍 1080 Koekelberg, Brussels
       </p>
       <a href="https://www.linkedin.com/in/arthur-mbomo-02710b137/" class="linkedin">Visit my LinkedIn</a>
     </div>
-
-    <section class="fade-in">
-      <h2>About Me</h2>
-      <p>
-        I'm a specialist combining the roles of data analyst and business analyst, with a passion for data governance.
-        My aim is to design tailor-made solutions, perfectly adapted to real-life business issues.
-        Thanks to my mastery of frameworks such as DAMA and DMBOK, I can structure data management processes while ensuring their quality and optimal exploitation.
-        I have developed solid skills in implementing ETL pipelines (Airflow, Metabase, SQL), processing large volumes of data with PySpark (RDD and DataFrames)
-        and using tools such as Power BI, Tableau and Excel to create interactive and dynamic visualizations. I combine this technical expertise with strategic capability,
-        exploiting artificial intelligence and machine learning (TensorFlow) to optimize data-driven decision-making. I have also led complex projects,
-        such as data migration and modeling, as well as the development of automated dashboards aimed at improving data quality and operational performance.
-        This dual role enables me to combine an understanding of business issues with cutting-edge technical skills, and to offer organizations innovative, high-impact solutions....
-      </p>
-    </section>
 
     <section class="fade-in">
       <h2>Professional Experiences</h2>
@@ -248,6 +259,7 @@
         <li>Data mapping and implementation of data quality qualification and remediation processes...</li>
         <li>Follow-up and support for top managers, providing solid insights for sound decision-making...</li>
       </ul>
+
       <h3>Master Data Analyst – FOD Economie</h3>
       <p>March 2023 – June 2023</p>
       <ul>
@@ -256,6 +268,7 @@
         <li>Updating the database and monitoring the progress of the files...</li>
         <li>Providing daily and/or weekly statistics to management using the tools provided...</li>
       </ul>
+
       <h3>Master Data Analyst – UCB</h3>
       <p>October 2022 – January 2023</p>
       <ul>
@@ -265,36 +278,49 @@
     </section>
 
     <section class="fade-in">
-      <h2>Academic Background</h2>
-      <h3>EPHEC – Bachelor's degree, E-business (Business Analysis)</h3>
-      <p>2017 – 2021 | Graduated with jury's satisfaction</p>
+      <h2>Education</h2>
+      <h3>Jedha Bootcamp - Data Lead Program</h3>
+      <p>February 2025 – May 2025</p>
       <ul>
-        <li>Focused on project management and digital business strategy</li>
+        <li>Data governance according to DAMA DMBOK</li>
+        <li>Design of robust, tailored data governance frameworks</li>
+        <li>Data pipeline construction</li>
+        <li>Data model structuring</li>
       </ul>
-      <h3>EPHEC – Bachelor's specialization in Business Data Analysis</h3>
+
+      <h3>EPHEC - Bachelor of specialization in Business Data Analysis</h3>
       <p>Sept. 2021 – Sept. 2022</p>
       <ul>
-        <li>SQL data modelisation</li>
-        <li>Data visualisation</li>
-        <li>Microsoft Power BI and Excel</li>
-        <li>QlikSense</li>
-        <li>R</li>
-        <li>Data mining with Python in Anaconda (Scikit-learn and Pandas)</li>
-        <li>Datawarehousing</li>
-        <li>SSIS / SSRS</li>
-        <li>Visual Studio</li>
-        <li>Data protection</li>
-        <li>Data analysis project management</li>
+        <li>SQL Data Modelling, Data Warehousing</li>
+        <li>Power BI, Excel, Qliksense</li>
+        <li>Python, R, Pandas, Scikit-learn</li>
+        <li>Data protection, project management</li>
       </ul>
-      <h3>Jedha Bootcamp – Data Governance & Engineering</h3>
-      <p>Feb. 2025 – May 2025</p>
+
+      <h3>EPHEC - Bachelor in E-business, Business Analysis option</h3>
+      <p>2017 – 2021</p>
       <ul>
-        <li>Built a complete and customized Data Governance Framework based on DAMA-DMBOK principles</li>
-        <li>Mastered data lifecycle management, data quality, metadata management, and stewardship models</li>
-        <li>Designed and implemented robust data pipelines using Python, SQL, and Apache Airflow</li>
-        <li>Built tailored data models to support scalable analytics and machine learning initiatives</li>
-        <li>Applied best practices in security, compliance, and business alignment</li>
+        <li>Graduated with jury's satisfaction</li>
+        <li>Project management</li>
       </ul>
+    </section>
+
+    <section class="fade-in">
+      <h2>Technical Skills & Tools</h2>
+      <div>
+        <span class="badge">Python</span>
+        <span class="badge">SQL</span>
+        <span class="badge">Power BI</span>
+        <span class="badge">Tableau</span>
+        <span class="badge">Metabase</span>
+        <span class="badge">Excel</span>
+        <span class="badge">ETL (Airflow, Databricks)</span>
+        <span class="badge">Machine Learning</span>
+      </div>
+    </section>
+
+    <section class="hashtags fade-in">
+      #DataGovernance #BusinessAnalysis #PowerBI #ETL #Python #MachineLearning #SQL #DataQuality #Analytics #DataModeling
     </section>
   </div>
 
@@ -309,6 +335,7 @@
 
     const faders = document.querySelectorAll(".fade-in");
     const appearOptions = { threshold: 0.2 };
+
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -317,6 +344,7 @@
         }
       });
     }, appearOptions);
+
     faders.forEach(fader => appearOnScroll.observe(fader));
   </script>
 </body>
