@@ -1,412 +1,676 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
+  <title>Arthur Mbomo — Data Quality, Governance & Integration Analyst</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arthur Mbomo - Data governance Specialist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="CV — Arthur Mbomo, Data Quality Analyst (Data Governance & Integration) — MSF Supply" />
+
   <style>
     :root {
-      --bg-dark: #0a0f24;
-      --bg-light: #f4f4f4;
-      --card-dark: #1f2a44;
-      --card-light: #fff;
-      --text-dark: #f3f3f3;
-      --text-light: #222;
-      --accent: #cba135;
-      --soft-dark: #9aa0b3;
-      --soft-light: #555;
+      /* Palette MSF - Light */
+      --msf-red: #d91c1c;
+      --bg-light: #ffffff;
+      --bg-light-alt: #f6f6f6;
+      --text-light: #202124;
+      --text-muted-light: #666666;
+      --border-light: #e0e0e0;
+
+      /* Palette MSF - Dark */
+      --bg-dark: #111111;
+      --bg-dark-alt: #1b1b1d;
+      --text-dark: #f2f2f2;
+      --text-muted-dark: #bdbdbd;
+      --border-dark: #333333;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
+    /* Light theme by default */
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      transition: background 0.4s, color 0.4s;
-    }
-
-    body.light {
-      background: var(--bg-light);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      line-height: 1.5;
+      background-color: var(--bg-light-alt);
       color: var(--text-light);
     }
 
-    body.dark {
-      background: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
-    header,
-    .container {
+    .page {
       max-width: 900px;
-      margin: auto;
-      padding: 20px;
+      margin: 0 auto;
+      background-color: var(--bg-light);
+      padding: 20px 18px 32px;
+      box-sizing: border-box;
+      border-left: 4px solid var(--msf-red);
     }
 
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: var(--card-dark);
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 999;
-      border-bottom: 1px solid var(--accent);
-    }
-
-    nav.light {
-      background-color: var(--card-light);
-      color: var(--text-light);
-    }
-
-    nav h1 {
-      font-size: 20px;
-      margin: 0;
-    }
-
-    .nav-buttons button {
-      background: var(--accent);
-      border: none;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 5px;
-      margin-left: 10px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .container {
-      background-color: var(--card-dark);
-      border-radius: 16px;
-      padding: 30px;
-      margin-top: 20px;
-      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
-    }
-
-    body.light .container {
-      background-color: var(--card-light);
-      color: var(--text-light);
+    header {
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 10px;
+      margin-bottom: 16px;
     }
 
     h1 {
-      text-align: center;
-      color: var(--accent);
-      font-size: 36px;
-    }
-
-    .soft-skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      font-size: 14px;
-      color: var(--soft-dark);
-    }
-
-    body.light .soft-skills {
-      color: var(--soft-light);
-    }
-
-    .soft-skills span {
-      background-color: #2a3553;
-      padding: 6px 14px;
-      border-radius: 20px;
-    }
-
-    body.light .soft-skills span {
-      background-color: #e0e0e0;
-    }
-
-    .profile-pic {
-      width: 130px;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid var(--accent);
-      margin: 20px auto;
-      display: block;
-    }
-
-    .contact-info {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 15px;
-    }
-
-    .contact-info a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .linkedin {
-      background-color: #0077b5;
-      padding: 10px 20px;
-      border-radius: 5px;
-      display: inline-block;
-      color: white;
-      margin-top: 10px;
-      transition: background-color 0.3s;
-    }
-
-    .linkedin:hover {
-      background-color: #005582;
-    }
-
-    section {
-      margin-top: 40px;
+      margin: 0;
+      font-size: 1.9rem;
+      font-weight: 600;
     }
 
     h2 {
-      font-size: 22px;
-      color: var(--accent);
-      border-bottom: 1px solid var(--accent);
-      padding-bottom: 5px;
-      margin-bottom: 10px;
+      margin: 2px 0 8px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--msf-red);
     }
 
     h3 {
-      margin-top: 15px;
+      margin-top: 18px;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 3px;
+    }
+
+    h4 {
+      margin: 10px 0 2px;
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 4px 0 8px;
+      font-size: 0.9rem;
     }
 
     ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
+      margin: 4px 0 10px 18px;
+      padding-left: 0;
+      font-size: 0.9rem;
     }
 
-    .badge {
-      background: var(--accent);
-      color: var(--bg-dark);
-      padding: 5px 12px;
-      border-radius: 15px;
-      margin: 5px;
-      font-size: 13px;
-      display: inline-block;
+    li {
+      margin-bottom: 3px;
     }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-in-out;
+    .contact {
+      font-size: 0.9rem;
+      color: var(--text-muted-light);
     }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .contact a {
+      color: var(--msf-red);
+      text-decoration: none;
     }
 
-    .hashtags {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
-      color: var(--soft-dark);
+    .contact a:hover {
+      text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 28px;
+    .soft-skills {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.78rem;
+    }
+
+    .soft-skills span {
+      border-radius: 999px;
+      padding: 2px 8px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-light-alt);
+    }
+
+    .toolbar {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .toolbar button {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-light-alt);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .toolbar button.active {
+      background: var(--msf-red);
+      color: #ffffff;
+      border-color: var(--msf-red);
+    }
+
+    .toolbar button:hover {
+      filter: brightness(0.97);
+    }
+
+    main {
+      margin-top: 8px;
+    }
+
+    section {
+      margin-top: 10px;
+    }
+
+    article {
+      margin-top: 6px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-light);
+      margin-top: 18px;
+      padding-top: 6px;
+      font-size: 0.78rem;
+      color: var(--text-muted-light);
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Dark theme */
+    body.dark {
+      background-color: #000000;
+      color: var(--text-dark);
+    }
+
+    body.dark .page {
+      background-color: var(--bg-dark);
+      border-left-color: var(--msf-red);
+    }
+
+    body.dark header {
+      border-bottom-color: var(--border-dark);
+    }
+
+    body.dark h3 {
+      border-bottom-color: var(--border-dark);
+    }
+
+    body.dark .contact {
+      color: var(--text-muted-dark);
+    }
+
+    body.dark .contact a {
+      color: #ff6b6b;
+    }
+
+    body.dark .soft-skills span {
+      border-color: var(--border-dark);
+      background: var(--bg-dark-alt);
+      color: var(--text-dark);
+    }
+
+    body.dark .toolbar button {
+      border-color: var(--border-dark);
+      background: var(--bg-dark-alt);
+      color: var(--text-dark);
+    }
+
+    body.dark .toolbar button.active {
+      background: var(--msf-red);
+      border-color: var(--msf-red);
+      color: #ffffff;
+    }
+
+    body.dark footer {
+      border-top-color: var(--border-dark);
+      color: var(--text-muted-dark);
+    }
+
+    @media print {
+      body {
+        background: #ffffff !important;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .page {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0;
+      }
+      a {
+        color: #000000 !important;
+        text-decoration: none !important;
       }
     }
   </style>
 </head>
-
-<body class="dark">
-  <nav id="navbar">
-    <h1>Arthur Mbomo - Data governance specialist</h1>
-    <div class="nav-buttons">
-      <button onclick="toggleTheme()">Toggle Theme</button>
-      <button onclick="window.print()">Export PDF</button>
-    </div>
-  </nav>
-
-  <div class="container">
+<body>
+  <div class="page">
     <header>
-      <img src="photo de profil.JPG" alt="Photo de profil" class="profile-pic" />
+      <h1>Arthur Mbomo</h1>
+      <h2 id="headline">Analyste qualité des données (Gouvernance & Intégration) — Data Analyst</h2>
+
+      <div class="contact">
+        <p>
+          📧 <a href="mailto:arthursmay@yahoo.fr">arthursmay@yahoo.fr</a> •
+          📞 +32 467 756 284 •
+          📍 1080 Koekelberg, Bruxelles
+        </p>
+        <p>
+          💻 <a href="https://github.com/mantorx" target="_blank">github.com/mantorx</a> •
+          🔗 <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+
       <div class="soft-skills">
-        <span>Teamwork</span>
-        <span>Under pressure</span>
-        <span>Agile</span>
-        <span>Analytical mindset</span>
-        <span>Attention to detail</span>
-        <span>Continuous learner</span>
-        <span>Adaptability</span>
-        <span>Bilingual: FR/EN</span>
+        <span>Travail en équipe</span>
+        <span>Esprit analytique</span>
+        <span>Sens du détail</span>
+        <span>Apprentissage continu</span>
+        <span>Adaptabilité</span>
+        <span>Gestion du stress</span>
+        <span>Mode Agile</span>
+        <span>FR / EN</span>
+      </div>
+
+      <div class="toolbar">
+        <button id="btn-fr" type="button" class="active">FR</button>
+        <button id="btn-en" type="button">EN</button>
+        <button id="btn-theme" type="button">Light</button>
+        <button id="btn-print" type="button">Export PDF</button>
       </div>
     </header>
 
-    <div class="contact-info">
-      <p>
-        📧 <a href="mailto:arthursmay@yahoo.fr">arthursmay@yahoo.fr</a><br />
-        📞 +32 467 756 284<br/>
-        📍 1080 Koekelberg, Brussels<br/>
-        personal repository : www.github.com/mantorx
-      </p>
-      <a href="https://www.linkedin.com/in/arthur-mbomo-02710b137/" class="linkedin">Visit my LinkedIn</a>
-    </div>
-    <section class="fade-in">
-        <h2>About Me</h2>
+    <!-- ===================== CV FR ===================== -->
+    <main id="cv-fr">
+      <!-- À propos de moi -->
+      <section>
+        <h3>À propos de moi</h3>
         <p>
-          Data Governance and Data Quality specialist with over 2 years of experience in implementing data management strategies, particularly in an international and multifunctional environment. Skilled in cross-functional management, agile management, and establishing a data culture. Able to bring teams together and collaborate with diverse stakeholders to ensure compliance, reliability, and the value of critical data. 
-
-          DAMA - DMBOK Data Governance Specialist
-          Practical implementation of a Centre of Excellence and federated governance system
-          Data Quality Control & Remediation
-          Metadata Documentation Strategy
-          Impact Analysis & Risk Management 
-          Implementation of KPIs and continuous monitoring
-          Cross-functional management and team management 
-          Facilitation of Data Communities & Awareness
-          Collaboration with IT, functional analysts, system developers, BI developers and external partners
-          Technologies: Power BI, Power Query, Excel, VBA, Data Galaxy, Qalios, SQL, Talend, Azure, Tableau, Databricks, SAP BI, Python (plotly, numpy, panda, Pyspark and SparkSql).
-
-          I look forward to talking with you. I look forward to finding out how I can help you take control of your data and finally generate real added value for your business. Take your data to the next level ! 
-
-          https://mantorx.github.io/cv/
+          Actuellement <strong>Analyste qualité des données</strong> chez <strong>MSF Supply</strong>, j’occupe au quotidien un rôle d’<strong>Analyste Gouvernance & Intégration de données</strong>, à l’interface entre les systèmes Nodhos, UniQuality et Unidata.
+          Je travaille sur la qualité, l’intégration et la fiabilisation des référentiels qui soutiennent les activités de supply chain du mouvement MSF.
         </p>
-    </section>
-    <section class="fade-in">
-      <h2>Professional Experiences</h2>
-      <h3>Data Quality Analyst– MSF Supply</h3>
-      <p>June 2023 – Present</p>
-      <ul>
-        <li>Implementation of a data governance framework based on a strategy focused on data quality, documentation, and security.</li>
-        <li>Design and management of a document repository and critical metadata accessible to all stakeholders.</li>
-        <li>Remediation actions for continuous improvement of data quality, with KPI tracking and monitoring.</li>
-        <li>Organising and leading a governance committee, tactical steering committee, and Data Ops team, adopting an agile and flexible approach.</li>
-        <li>Managing data-related projects: addition, modification, deletion, impact analysis.</li>
-        <li>Developing and managing a Data Catalogue for end users.</li> 
-        <li>Promoting a data culture through training, regular meetings and proactive communication.</li> 
-        <li>Working closely with IT teams, data analysts, BI developers, SQL developers and external partners to maintain and improve the sustainable infrastructure.</li>  
-        <li>Project management for the integration of the Unidata unified data system API</li> 
-        <li>Ad hoc analysis of the data interoperability management program (Unidata acceptance queue) with functional testing and validation.</li> 
-        <li>Collaboration with MSF logistics headquarters in Bordeaux (France) and MSF Belgium. </li> 
-        <li>Support for business teams on all practical issues relating to data</li> 
-        <li>Regular reporting to top management on the health of the data and the achievement of strategic governance objectives.</li> 
-      </ul>
+        <p>
+          Spécialiste de la qualité et de la gouvernance des données, je suis avant tout <strong>data analyst</strong> : analyse, modélisation et visualisation des données, développement d’<strong>indicateurs de contrôle</strong> (Power BI), profilage, nettoyage et transformation des données via <strong>Excel avancé</strong>, <strong>Power Query</strong> et <strong>SQL</strong>.
+        </p>
+        <p>
+          Engagé dans le mouvement MSF, je souhaite contribuer de manière durable à sa <strong>mission</strong> et à sa <strong>vision</strong>, en aidant les équipes médicales et logistiques à disposer de données fiables, cohérentes et accessibles. Je suis dans une démarche de <strong>développement continu</strong> (Executive Master en Management & Data Management à l’ICHEC, formations spécialisées, veille sur les sujets data) et je me positionne comme <strong>force de proposition</strong>, capable de porter des sujets complexes auprès des instances hiérarchiques et d’embarquer les collaborateurs dans une approche collaborative.
+        </p>
+      </section>
 
-      <h3>Master Data Analyst – FOD Economie</h3>
-      <p>March 2023 – June 2023</p>
-      <ul>
-        <li>Make sure premium data is well encoded in our Data management software...</li>
-        <li>Play a key role beetween IT & Data stewards team...</li>
-        <li>Updating the database and monitoring the progress of the files...</li>
-        <li>Providing daily and/or weekly statistics to management using the tools provided...</li>
-      </ul>
+      <!-- Compétences clés -->
+      <section>
+        <h3>Compétences clés</h3>
 
-      <h3>Master Data Analyst – UCB</h3>
-      <p>October 2022 – January 2023</p>
-      <ul>
-        <li>Warehouse data management via SAP BI...</li>
-        <li>Analysis of digital integration project for warehouse receiving control sheets via SAP BI...</li>
-      </ul>
-    </section>
+        <h4>Gouvernance & qualité des données</h4>
+        <ul>
+          <li>Data governance, data lineage, data catalog, data stewardship.</li>
+          <li>Définition et suivi de KPI qualité (7 KPI UniQuality, extensibles à d’autres domaines).</li>
+          <li>Politiques, standards, conformité & gestion des risques liés aux données.</li>
+        </ul>
 
-    <section class="fade-in">
-      <h2>Education</h2>
-      <h3>Jedha Bootcamp - Data analysis Lead Program</h3>
-      <p>February 2025 – May 2025</p>
-      <ul>
-        <li>Using Gartner data governance analysis framework</li>
-        <li>Design robust, tailored data governance according Best frameworks(DAMA-DMBOK)</li> 
-        <li>Lead data project and team management</li> 
-        <li>Data governance pilot implementation Spotify case study available github.com/mantorx/Spotify-case</li>
-        <li>Manage projects in agile frameworks (scrum, agile scale, kanban, scrumban etc)</li>
-        <li>Set up robust Data pipeline construction with python, Docker, Airflow and Amazon Redshift</li>
-        <li>Build insightful dashboards with python (matplotlib, plotly) , Tableau and Metabase</li>
-        <li>Applying Best practices to make insightful presentation</li>
-        <li>Data model structuring and data warehousing on Amazon S3 or MongodB</li>
-        <li>Manage & Analyze Big data with Databricks and PySpark-SparkSQL</li>
-      </ul>
+        <h4>Analyse, intégration & BI</h4>
+        <ul>
+          <li>Développement d’indicateurs de contrôle et de dashboards de pilotage (Power BI).</li>
+          <li>Profilage, nettoyage et transformation de données (Excel avancé, Power Query, SQL).</li>
+          <li>Analyse de la qualité et de la cohérence des données entre systèmes (Nodhos, UniQuality, Unidata).</li>
+          <li>Participation au linkage Unidata–Nodhos (APIs, intégration, tests, déploiements).</li>
+        </ul>
 
-      <h3>Cefora - Power BI Bootcamp</h3>
-      <p>December 2024 – January 2025</p>
-      <ul>
-        <li>Understanding business needs and requirements</li>
-        <li>ETL on PowerQuery (data extracting, cleansing and reconcialiting)</li> 
-        <li>Data modeling with star shema conception logical model using joints</li>
-        <li>Hands-on DAX powerful</li>
-        <li>Filter context, row-context and time intelligence</li>
-        <li>Build beautiful, insightful and automated reports and dashboards </li>
-        <li>Dashbaord access management by implementing level data access</li>
-        <li>Deployment reports, dashboards on Power Bi service using app</li>
-        <li>Support Top management by introducing data stories</li>
-      </ul>
+        <h4>Organisation, communication & leadership</h4>
+        <ul>
+          <li>Gestion des parties prenantes (métier, IT, fournisseur) et animation de workshops.</li>
+          <li>Rédaction de spécifications fonctionnelles, user stories, critères d’acceptation.</li>
+          <li>Présentation de sujets complexes aux instances hiérarchiques, vulgarisation et accompagnement du changement.</li>
+          <li>Capacité à leader des sujets data transverses et à embarquer les équipes.</li>
+        </ul>
+      </section>
 
-      <h3>EPHEC - Bachelor of specialization in Business Data Analysis</h3>
-      <p>Sept. 2021 – Sept. 2022</p>
-      <ul>
-        <li>SQL Data Modelling, Data Warehousing on MS Azure</li>
-        <li>Applying statistical model(regression pattern) and tests(P-tests,chi2,pearson-coef,Gauss,binomial,fish.etc)</li>
-        <li>Mastering data visualization tools (Power BI, Excel, Qliksense)</li>
-        <li>Fundational knowdlegdes about Python (Pandas,numpy,matplotlib)</li> 
-        <li>machine learning NLP(NLTK) , Scikit-learn libraries</li>
-        <li>Data protection management (data compliance (GDPR), data privacy)</li>
-        <li>Data analysis project management (final business case)</li>
-      </ul>
+      <!-- Expérience professionnelle (récent -> ancien) -->
+      <section>
+        <h3>Expérience professionnelle</h3>
 
-      <h3>EPHEC - Bachelor in E-business, Business Analysis option</h3>
-      <p>2017 – 2021</p>
-      <ul>
-        <li>E-commerce project management (prestashop e-shop practical case study) </li>
-        <li>marketing project management by churning out practical digital marketing campaign (SEO, SEA, and KPI google analytics)</li>
-        <li>Business analysis project management (development of Odoo's module in 5 members team) </li>
-      </ul>
-    </section>
+        <article>
+          <h4>Analyste qualité des données (Gouvernance & Intégration) — MSF Supply</h4>
+          <p><em>Juin 2023 – Présent | Bruxelles, Belgique</em></p>
+          <ul>
+            <li>Traduction des besoins métier en exigences techniques et fonctionnelles claires pour l’IT, en lien avec Nodhos, UniQuality et Unidata.</li>
+            <li>Surveillance et amélioration de la qualité des données à travers les systèmes (Nodhos / Unidata / UniQuality).</li>
+            <li>Mise en place d’un data catalog et de 7 KPI opérationnels pour UniQuality (complétude, cohérence, fraîcheur des données).</li>
+            <li>Interlocuteur principal avec le fournisseur (Spinco) pour la maintenance et l’évolution des API REST assurant le linkage entre les systèmes.</li>
+            <li>Conception et exécution de plans de test d’intégration ; participation aux déploiements en mode Agile avec les équipes IT et métiers.</li>
+            <li>Animation d’ateliers multi‑parties prenantes (métier, IT, fournisseur) pour prioriser les demandes et résoudre les écarts de données.</li>
+            <li>Contribution à la mise en place d’indicateurs clairs de monitoring de la qualité des données, définis sur base des règles métiers et du cadre ALCOA+, au sein de Nodhos et dans l’interface avec les référentiels UniQuality et Unidata, afin de minimiser les incohérences, renforcer l’interopérabilité entre les systèmes et améliorer l’efficacité des activités de supply chain (catalogue commun d’articles, bases de données fournisseurs médicaux).</li>
+            <li>Participation au pilotage des projets de linkage Unidata–Nodhos : recueil et formalisation des besoins métiers, rédaction des spécifications fonctionnelles, coordination avec l’IT et le fournisseur, définition et exécution des scénarios de test, accompagnement des déploiements en mode Agile et mitigation des risques liés aux flux de données et à la qualité des référentiels.</li>
+          </ul>
+        </article>
 
-    <section class="fade-in">
-      <h2>Technical Skills & Tools</h2>
-      <div>
-        <span class="badge">Python</span>
-        <span class="badge">SQL</span>
-        <span class="badge">Power BI</span>
-        <span class="badge">Tableau</span>
-        <span class="badge">Metabase</span>
-        <span class="badge">Git_Github_Gitlab</span>
-        <span class="badge">Docker</span>
-        <span class="badge">VS_code</span>
-        <span class="badge">Power Query</span>
-        <span class="badge">SAP BI</span>
-        <span class="badge">MS Azure</span>
-        <span class="badge">Data Galaxy</span>
-        <span class="badge">Talend</span>
-        <span class="badge">Databricks</span>
-        <span class="badge">PySpark-SparkSQL</span>
-        <span class="badge">MS Fabric</span>
-      </div>
-    </section>
+        <article>
+          <h4>Master Data Analyst — SPF Économie (FOD Economie)</h4>
+          <p><em>Mars 2023 – Juin 2023 | Bruxelles, Belgique</em></p>
+          <ul>
+            <li>Analyse et nettoyage de référentiels pour harmoniser les données entre systèmes.</li>
+            <li>Standardisation de règles métiers pour sécuriser l’encodage des données critiques.</li>
+            <li>Interface entre l’équipe IT et les data stewards pour le suivi des anomalies et des corrections.</li>
+            <li>Mise à jour de la base de données et suivi de l’avancement des dossiers.</li>
+            <li>Fourniture de statistiques quotidiennes et hebdomadaires au management.</li>
+          </ul>
+        </article>
 
-    <section class="hashtags fade-in">
-      #DataGovernance #BusinessAnalysis #PowerBI #ETL #Python #MachineLearning #SQL #DataQuality #Analytics #DataModeling
-    </section>
+        <article>
+          <h4>Master Data Analyst — UCB</h4>
+          <p><em>Octobre 2022 – Janvier 2023 | Belgique</em></p>
+          <ul>
+            <li>Gestion et analyse des données de warehouse via SAP BI.</li>
+            <li>Mise en place de contrôles qualité et d’automatisations pour fiabiliser les master data.</li>
+            <li>Analyse d’un projet d’intégration digitale pour les fiches de contrôle de réception via SAP BI.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Éducation & Formations (récent -> ancien) -->
+      <section>
+        <h3>Éducation & formations</h3>
+
+        <article>
+          <h4>Executive Master en Management & Data Management — ICHEC Management School</h4>
+          <p><em>2025 – 2026 (en cours)</em></p>
+          <ul>
+            <li>Management stratégique des organisations et pilotage par la donnée.</li>
+            <li>Gouvernance des données au service de la performance business.</li>
+            <li>Conduite du changement et accompagnement des équipes dans les projets data.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>Jedha Bootcamp — Data Analysis Lead Program</h4>
+          <p><em>Février 2025 – Mai 2025</em></p>
+          <ul>
+            <li>Data governance selon les frameworks Gartner et DAMA‑DMBOK.</li>
+            <li>Conception de stratégies de gouvernance adaptées aux besoins métiers.</li>
+            <li>Gestion de projets data en mode Agile (Scrum, Kanban, Scrumban).</li>
+            <li>Construction de pipelines de données (Python, Docker, Airflow, Amazon Redshift).</li>
+            <li>Création de dashboards avec Python (matplotlib, plotly), Tableau et Metabase.</li>
+            <li>Structuration de modèles de données et data warehousing (Amazon S3, MongoDB).</li>
+            <li>Analyse de données volumineuses avec Databricks et PySpark / SparkSQL.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>Cefora — Gestion des parties prenantes dans un projet</h4>
+          <p><em>Novembre 2025</em></p>
+          <ul>
+            <li>Formation certifiante en présentiel avec mises en situation pratiques.</li>
+            <li>Identification, cartographie et analyse des parties prenantes.</li>
+            <li>Techniques de communication, de négociation et de gestion des attentes.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>Cefora — Power BI Bootcamp</h4>
+          <p><em>Décembre 2024 – Janvier 2025</em></p>
+          <ul>
+            <li>Compréhension des besoins métiers et traduction en rapports et dashboards.</li>
+            <li>ETL avec Power Query (extraction, nettoyage, rapprochement de données).</li>
+            <li>Modélisation de données (schéma en étoile) et DAX avancé.</li>
+            <li>Publication, sécurité et gestion des accès sur Power BI Service.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>EPHEC — Bachelor de spécialisation en Business Data Analysis</h4>
+          <p><em>Septembre 2021 – Septembre 2022</em></p>
+          <ul>
+            <li>SQL, modélisation de données et data warehousing sur MS Azure.</li>
+            <li>Statistiques appliquées (régressions, tests, corrélations).</li>
+            <li>Visualisation de données (Power BI, Excel, Qlik Sense).</li>
+            <li>Bases de Python (Pandas, Numpy, Matplotlib), machine learning & NLP.</li>
+            <li>Gestion de la protection des données (RGPD, privacy).</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>EPHEC — Bachelor en E‑business, option Business Analysis</h4>
+          <p><em>2017 – 2021</em></p>
+          <ul>
+            <li>Gestion de projets e‑commerce (étude de cas Prestashop).</li>
+            <li>Marketing digital (SEO, SEA, Google Analytics).</li>
+            <li>Business analysis et développement de modules Odoo en équipe.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Compétences techniques -->
+      <section>
+        <h3>Compétences techniques</h3>
+        <ul>
+          <li><strong>Data Analytics & BI :</strong> Power BI (dashboards & KPI), Excel avancé, Power Query.</li>
+          <li><strong>Bases de données & SQL :</strong> requêtes, jointures, nettoyage, transformation de données.</li>
+          <li><strong>Plateformes data :</strong> SAP BI, MS Azure, Databricks, MS Fabric.</li>
+          <li><strong>Gouvernance & qualité :</strong> Data Galaxy, Unidata, UniQuality, data catalog.</li>
+          <li><strong>Langages & outils :</strong> Python (bases), Git/Github/Gitlab, Docker, VS Code.</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- ===================== CV EN ===================== -->
+    <main id="cv-en" style="display:none;">
+      <!-- About me -->
+      <section>
+        <h3>About me</h3>
+        <p>
+          Currently working at <strong>MSF Supply</strong> as a <strong>Data Quality Analyst</strong>, I hold a day‑to‑day role of <strong>Data Governance & Integration Analyst</strong>, at the interface between Nodhos, UniQuality and Unidata.
+          I focus on data quality, systems integration and reference data reliability to support MSF’s supply chain activities.
+        </p>
+        <p>
+          I am first and foremost a <strong>data analyst</strong>, with experience in data analysis, modelling and visualization, and in building <strong>control indicators</strong> (mainly with Power BI). I work with <strong>advanced Excel</strong>, <strong>Power Query</strong> and <strong>SQL</strong> for data profiling, cleansing and transformation.
+        </p>
+        <p>
+          Being part of the MSF movement, I am motivated by the will to <strong>contribute to MSF’s mission and vision</strong> by making data more reliable, consistent and actionable for medical and logistics teams. I am committed to <strong>continuous development</strong> (Executive Master in Management & Data Management at ICHEC, specialized trainings, ongoing data‑related watch) and I position myself as a <strong>proactive contributor</strong>, able to lead complex topics, engage stakeholders and translate business needs into concrete data solutions.
+        </p>
+      </section>
+
+      <!-- Key skills -->
+      <section>
+        <h3>Key skills</h3>
+
+        <h4>Data governance & quality</h4>
+        <ul>
+          <li>Data governance, data lineage, data catalog, data stewardship.</li>
+          <li>Definition and monitoring of data quality KPIs (7 UniQuality KPIs, extendable to other domains).</li>
+          <li>Policies, standards, compliance & data‑related risk management.</li>
+        </ul>
+
+        <h4>Data analysis, integration & BI</h4>
+        <ul>
+          <li>Development of control indicators and management dashboards (Power BI).</li>
+          <li>Data profiling, cleansing and transformation (advanced Excel, Power Query, SQL).</li>
+          <li>Data quality and consistency analysis across systems (Nodhos, UniQuality, Unidata).</li>
+          <li>Contribution to Unidata–Nodhos linkage (APIs, integration, testing, deployments).</li>
+        </ul>
+
+        <h4>Organization, communication & leadership</h4>
+        <ul>
+          <li>Stakeholder management (business, IT, vendors) and workshop facilitation.</li>
+          <li>Writing functional specifications, user stories, acceptance criteria.</li>
+          <li>Presenting complex topics to management, simplification and change support.</li>
+          <li>Ability to lead cross‑functional data topics and bring teams on board.</li>
+        </ul>
+      </section>
+
+      <!-- Professional experience (recent -> older) -->
+      <section>
+        <h3>Professional experience</h3>
+
+        <article>
+          <h4>Data Quality Analyst (Data Governance & Integration) — MSF Supply</h4>
+          <p><em>June 2023 – Present | Brussels, Belgium</em></p>
+          <ul>
+            <li>Translate business needs into clear technical and functional requirements for IT, related to Nodhos, UniQuality and Unidata.</li>
+            <li>Monitor and improve data quality across systems (Nodhos / Unidata / UniQuality).</li>
+            <li>Set up a data catalog and 7 operational KPIs for UniQuality (data completeness, consistency, freshness).</li>
+            <li>Act as main point of contact with the vendor (Spinco) for REST API maintenance and evolution ensuring linkage between systems.</li>
+            <li>Design and execute integration test plans; support Agile deployments with IT and business teams.</li>
+            <li>Facilitate multi‑stakeholder workshops (business, IT, vendor) to prioritize requests and resolve data discrepancies.</li>
+            <li>Contribute to the implementation of clear data‑quality monitoring indicators, defined based on business rules and the ALCOA+ framework, within Nodhos and at the interface with UniQuality and Unidata, in order to minimize inconsistencies, strengthen interoperability between systems and improve supply chain efficiency (common product catalog, medical supplier databases).</li>
+            <li>Support the steering of Unidata–Nodhos linkage projects: gather and formalize business requirements, draft functional specifications, coordinate with IT and vendor, define and execute test scenarios, support Agile deployments and mitigate risks related to data flows and reference data quality.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>Master Data Analyst — FOD Economie (FPS Economy)</h4>
+          <p><em>March 2023 – June 2023 | Brussels, Belgium</em></p>
+          <ul>
+            <li>Analyze and cleanse reference data to harmonize information across systems.</li>
+            <li>Standardize business rules to secure the encoding of critical data.</li>
+            <li>Act as key interface between IT and the data stewards team.</li>
+            <li>Update databases and monitor the progress of files.</li>
+            <li>Provide daily and weekly statistics to management.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>Master Data Analyst — UCB</h4>
+          <p><em>October 2022 – January 2023 | Belgium</em></p>
+          <ul>
+            <li>Warehouse data management and analysis using SAP BI.</li>
+            <li>Set up quality controls and automation to secure master data processing.</li>
+            <li>Analyze a digital integration project for warehouse receiving control sheets via SAP BI.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Education & training (recent -> older) -->
+      <section>
+        <h3>Education & training</h3>
+
+        <article>
+          <h4>Executive Master in Management & Data Management — ICHEC Management School</h4>
+          <p><em>2025 – 2026 (ongoing)</em></p>
+          <ul>
+            <li>Strategic management and data‑driven performance.</li>
+            <li>Data governance to support business performance.</li>
+            <li>Change management and support for teams in data projects.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>Jedha Bootcamp — Data Analysis Lead Program</h4>
+          <p><em>February 2025 – May 2025</em></p>
+          <ul>
+            <li>Data governance using Gartner and DAMA‑DMBOK frameworks.</li>
+            <li>Design of tailored governance strategies aligned with business needs.</li>
+            <li>Management of data projects in Agile environments (Scrum, Kanban, Scrumban).</li>
+            <li>Data pipelines with Python, Docker, Airflow and Amazon Redshift.</li>
+            <li>Dashboards with Python (matplotlib, plotly), Tableau and Metabase.</li>
+            <li>Data modelling and data warehousing (Amazon S3, MongoDB).</li>
+            <li>Big Data analysis with Databricks and PySpark / SparkSQL.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>Cefora — Stakeholder Management in Projects</h4>
+          <p><em>November 2025</em></p>
+          <ul>
+            <li>Certification course delivered onsite with practical simulations.</li>
+            <li>Stakeholder identification, mapping and analysis.</li>
+            <li>Communication, negotiation and expectation management techniques.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>Cefora — Power BI Bootcamp</h4>
+          <p><em>December 2024 – January 2025</em></p>
+          <ul>
+            <li>Understanding business needs and requirements.</li>
+            <li>ETL with Power Query (data extraction, cleansing and reconciliation).</li>
+            <li>Data modelling with star schema and advanced DAX.</li>
+            <li>Publishing, security and access management on Power BI Service.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>EPHEC — Bachelor of Specialization in Business Data Analysis</h4>
+          <p><em>Sept. 2021 – Sept. 2022</em></p>
+          <ul>
+            <li>SQL, data modelling and data warehousing on MS Azure.</li>
+            <li>Applied statistics (regressions, tests, correlations).</li>
+            <li>Data visualization (Power BI, Excel, Qlik Sense).</li>
+            <li>Foundations of Python (Pandas, Numpy, Matplotlib), machine learning & NLP.</li>
+            <li>Data protection management (GDPR, data privacy).</li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>EPHEC — Bachelor in E‑business, Business Analysis option</h4>
+          <p><em>2017 – 2021</em></p>
+          <ul>
+            <li>E‑commerce project management (Prestashop case study).</li>
+            <li>Digital marketing (SEO, SEA, Google Analytics KPIs).</li>
+            <li>Business analysis and Odoo module development in team projects.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Technical skills -->
+      <section>
+        <h3>Technical skills</h3>
+        <ul>
+          <li><strong>Data Analytics & BI:</strong> Power BI (dashboards & KPIs), advanced Excel, Power Query.</li>
+          <li><strong>Databases & SQL:</strong> queries, joins, data cleansing and transformation.</li>
+          <li><strong>Data platforms:</strong> SAP BI, MS Azure, Databricks, MS Fabric.</li>
+          <li><strong>Governance & quality:</strong> Data Galaxy, Unidata, UniQuality, data catalog.</li>
+          <li><strong>Languages & tools:</strong> Python (basics), Git/Github/Gitlab, Docker, VS Code.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p id="tags">
+        #DataGovernance #DataQuality #DataIntegration #PowerBI #SQL #MSF #SupplyChain #Analytics
+      </p>
+    </footer>
   </div>
 
   <script>
-    function toggleTheme() {
-      const body = document.body;
-      const nav = document.getElementById("navbar");
-      body.classList.toggle("light");
-      body.classList.toggle("dark");
-      nav.classList.toggle("light");
+    const btnFr = document.getElementById('btn-fr');
+    const btnEn = document.getElementById('btn-en');
+    const btnTheme = document.getElementById('btn-theme');
+    const btnPrint = document.getElementById('btn-print');
+    const cvFr = document.getElementById('cv-fr');
+    const cvEn = document.getElementById('cv-en');
+    const tags = document.getElementById('tags');
+
+    function setLang(lang) {
+      if (lang === 'fr') {
+        cvFr.style.display = 'block';
+        cvEn.style.display = 'none';
+        btnFr.classList.add('active');
+        btnEn.classList.remove('active');
+        document.documentElement.lang = 'fr';
+        tags.textContent =
+          '#GouvernanceDesDonnées #QualitéDesDonnées #IntégrationDeDonnées #PowerBI #SQL #MSF #SupplyChain #Analytics';
+      } else {
+        cvFr.style.display = 'none';
+        cvEn.style.display = 'block';
+        btnFr.classList.remove('active');
+        btnEn.classList.add('active');
+        document.documentElement.lang = 'en';
+        tags.textContent =
+          '#DataGovernance #DataQuality #DataIntegration #PowerBI #SQL #MSF #SupplyChain #Analytics';
+      }
     }
 
-    const faders = document.querySelectorAll(".fade-in");
-    const appearOptions = { threshold: 0.2 };
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.toggle('dark');
+      btnTheme.textContent = isDark ? 'Dark' : 'Light';
+    }
 
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, appearOptions);
-
-    faders.forEach(fader => appearOnScroll.observe(fader));
+    btnFr.addEventListener('click', () => setLang('fr'));
+    btnEn.addEventListener('click', () => setLang('en'));
+    btnTheme.addEventListener('click', toggleTheme);
+    btnPrint.addEventListener('click', () => window.print());
   </script>
 </body>
-
 </html>
