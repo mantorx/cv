@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Arthur Mbomo — CV & Lettre de motivation</title>
+  <title>Arthur Mbomo — Data Quality, Governance & Integration Analyst</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CV & Lettre de motivation — Arthur Mbomo, Data Quality, Governance & Integration Analyst — MSF Supply / SPINCO" />
+  <meta name="description" content="CV — Arthur Mbomo, Data Quality Analyst (Data Governance & Integration)" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -187,11 +187,6 @@
 
     .toolbar button:hover {
       filter: brightness(1.05);
-    }
-
-    /* Option : distinguer légèrement le bouton Lettre */
-    #btn-letter {
-      border-style: dashed;
     }
 
     @media (max-width: 820px) {
@@ -517,134 +512,6 @@
       opacity: 0.9;
     }
 
-    /* ===== MODALE LETTRE ===== */
-    #letter-modal {
-      position: fixed;
-      inset: 0;
-      display: none;
-      z-index: 9999;
-    }
-
-    #letter-backdrop {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-    }
-
-    #letter-box {
-      position: absolute;
-      top: 5%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(900px, 96vw);
-      height: 90vh;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.6);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    body.dark #letter-box {
-      background: #151518;
-    }
-
-    #letter-header {
-      padding: 6px 14px;
-      background: linear-gradient(90deg, #111827 0%, #8b1111 40%, #e01f1f 100%);
-      color: #f9fafb;
-      font-family: "Playfair Display", serif;
-      font-size: 0.95rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    #letter-close {
-      border: 1px solid rgba(249,250,251,0.4);
-      background: rgba(15,23,42,0.7);
-      color: #ffffff;
-      border-radius: 999px;
-      width: 26px;
-      height: 22px;
-      cursor: pointer;
-      font-size: 14px;
-      line-height: 18px;
-      text-align: center;
-    }
-
-    #letter-content {
-      flex: 1;
-      overflow: auto;
-      padding: 14px 18px 18px;
-      box-sizing: border-box;
-    }
-
-    .letter-header {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      font-size: 0.88rem;
-      color: var(--text-muted-light);
-      margin-bottom: 10px;
-    }
-
-    body.dark .letter-header {
-      color: var(--text-muted-dark);
-    }
-
-    .letter-header div {
-      max-width: 48%;
-    }
-
-    @media (max-width: 680px) {
-      .letter-header {
-        flex-direction: column;
-      }
-      .letter-header div {
-        max-width: 100%;
-        margin-bottom: 6px;
-      }
-    }
-
-    .letter-body h2 {
-      margin: 8px 0 10px;
-      font-family: "Playfair Display", serif;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--msf-red);
-    }
-
-    .letter-body p {
-      font-size: 0.9rem;
-      margin: 6px 0;
-      text-align: justify;
-    }
-
-    .signature-block {
-      margin-top: 18px;
-      font-size: 0.9rem;
-    }
-
-    .signature-name {
-      margin-top: 18px;
-      font-weight: 600;
-      font-family: "Playfair Display", serif;
-    }
-
-    .contact-line {
-      font-size: 0.85rem;
-      color: var(--text-muted-light);
-    }
-
-    body.dark .contact-line {
-      color: var(--text-muted-dark);
-    }
-
     @media print {
       body {
         background: #ffffff !important;
@@ -661,9 +528,6 @@
       }
       .card {
         box-shadow: none;
-      }
-      #letter-modal {
-        display: none !important;
       }
       a {
         color: #000000 !important;
@@ -689,7 +553,7 @@
           Data Quality • Governance • Integration
         </h2>
         <span id="headline-tag">
-          Data Analyst au service de la mission MSF
+          Data Analyst spécialisé en qualité & intégration de données
         </span>
       </div>
 
@@ -699,7 +563,6 @@
           <button id="btn-en" type="button">EN</button>
           <button id="btn-theme" type="button">Dark</button>
           <button id="btn-print" type="button">PDF</button>
-          <button id="btn-letter" type="button">Lettre</button>
         </div>
       </div>
     </header>
@@ -942,7 +805,7 @@
           <section>
             <h3>À propos de moi</h3>
             <p>
-              Actuellement <strong>Analyste qualité des données</strong> chez <strong>MSF Supply</strong>, j’occupe au quotidien un rôle d’<strong>Analyste Gouvernance & Intégration de données</strong>, à l’interface entre Nodhos, UniQuality et Unidata. Je travaille sur la qualité, l’intégration et la fiabilisation des référentiels qui soutiennent les activités de supply chain du mouvement MSF.
+              Actuellement <strong>Analyste qualité des données</strong> chez <strong>MSF Supply</strong>, j’occupe au quotidien un rôle d’<strong>Analyste Gouvernance & Intégration de données</strong>, à l’interface entre Nodhos, UniQuality et Unidata. Je travaille sur la qualité, l’intégration et la fiabilisation des référentiels qui soutiennent les activités de supply chain.
             </p>
             <p>
               Spécialiste de la qualité et de la gouvernance des données, je suis avant tout <strong>data analyst</strong> : analyse, modélisation et visualisation des données, développement d’<strong>indicateurs de contrôle</strong> (Power BI), profilage, nettoyage et transformation via <strong>Excel avancé</strong>, <strong>Power Query</strong> et <strong>SQL</strong>.
@@ -992,10 +855,10 @@
                 <li>Traduction des besoins métier en exigences techniques et fonctionnelles claires pour l’IT, en lien avec Nodhos, les files d’acceptance queue, et le linkage Nodhos avec UniQuality et Unidata.</li>
                 <li>Surveillance et amélioration de la qualité des données et de l’interopérabilité avec UniQuality et Unidata.</li>
                 <li>Mise en place d’un data catalog et de KPI opérationnels pour UniQuality (complétude, cohérence, fraîcheur des données).</li>
-                <li>Échanges avec le fournisseur (Spinco) pour la maintenance et l’évolution des solutions d’API REST assurant le linkage entre les systèmes unifiés du mouvement.</li>
+                <li>Échanges avec le fournisseur pour la maintenance et l’évolution des solutions d’API REST assurant le linkage entre les systèmes.</li>
                 <li>Conception et exécution de plans de test d’intégration ; participation aux déploiements en mode Agile avec les équipes IT et métiers.</li>
                 <li>Animation d’ateliers multi‑parties prenantes (métier, IT, fournisseur) pour prioriser les demandes et résoudre les écarts de données.</li>
-                <li>Contribution à la mise en place d’indicateurs clairs de monitoring de la qualité des données, définis sur base des règles métiers et du cadre ALCOA+, au sein de Nodhos et dans l’interface avec UniQuality et Unidata, afin de minimiser les incohérences, renforcer l’interopérabilité et améliorer l’efficacité des activités de supply chain.</li>
+                <li>Contribution à la mise en place d’indicateurs clairs de monitoring de la qualité des données, définis sur base des règles métiers et du cadre ALCOA+, afin de minimiser les incohérences, renforcer l’interopérabilité et améliorer l’efficacité des activités de supply chain.</li>
                 <li>Participation au pilotage des projets de linkage Unidata–Nodhos : recueil et formalisation des besoins métiers, spécifications fonctionnelles, coordination avec l’IT et le fournisseur, scénarios de test, déploiements Agile et mitigation des risques liés aux flux de données.</li>
               </ul>
             </article>
@@ -1029,7 +892,10 @@
           <section>
             <h3>About me</h3>
             <p>
-              Currently working at <strong>MSF Supply</strong> as a <strong>Data Quality Analyst</strong>, I hold a day‑to‑day role of <strong>Data Governance & Integration Analyst</strong>, at the interface between Nodhos, UniQuality and Unidata. I work on data quality, integration and reference data reliability to support MSF’s supply chain activities.
+              Currently working as a <strong>Data Quality Analyst</strong>, I hold a day‑to‑day role of <strong>Data Governance & Integration Analyst</strong>, at the interface between operational systems and data governance tools. I focus on data quality, integration and reference data reliability to support business and supply chain processes.
+            </p>
+            <p>
+              As a data quality and governance specialist, I am above all a <strong>data analyst</strong>: data analysis, modelling and visualisation, development of <strong>control indicators</strong> (Power BI), profiling, cleansing and transformation using <strong>advanced Excel</strong>, <strong>Power Query</strong> and <strong>SQL</strong>.
             </p>
           </section>
 
@@ -1050,8 +916,8 @@
               <ul>
                 <li>Development of control indicators and management dashboards (Power BI).</li>
                 <li>Profiling, cleansing and transformation of data (advanced Excel, Power Query, SQL).</li>
-                <li>Analysis of data quality and consistency across systems (Nodhos, UniQuality, Unidata).</li>
-                <li>Participation in Unidata–Nodhos linkage (APIs, integration, testing, deployments).</li>
+                <li>Analysis of data quality and consistency across systems.</li>
+                <li>Participation in system linkage projects (APIs, integration, testing, deployments).</li>
               </ul>
             </article>
 
@@ -1070,17 +936,17 @@
             <h3>Professional experience</h3>
 
             <article>
-              <h4>Data Quality Analyst (Data Governance & Integration) — MSF Supply</h4>
+              <h4>Data Quality Analyst (Data Governance & Integration)</h4>
               <div class="meta">June 2023 – Present • Brussels, Belgium</div>
               <ul>
-                <li>Translate business needs into clear technical and functional requirements for IT, linked to Nodhos, acceptance queues and the linkage between Nodhos, UniQuality and Unidata.</li>
-                <li>Monitor and improve data quality and interoperability with UniQuality and Unidata.</li>
-                <li>Set up a data catalog and operational KPIs for UniQuality (completeness, consistency, freshness).</li>
-                <li>Coordinate with the vendor (Spinco) for maintenance and evolution of REST API solutions ensuring linkage between unified systems in the MSF movement.</li>
+                <li>Translate business needs into clear technical and functional requirements for IT, linked to operational systems and data governance platforms.</li>
+                <li>Monitor and improve data quality and interoperability across systems.</li>
+                <li>Set up a data catalog and operational KPIs (completeness, consistency, freshness).</li>
+                <li>Coordinate with vendors for maintenance and evolution of REST API solutions ensuring linkage between systems.</li>
                 <li>Design and execute integration test plans; support Agile deployments with IT and business teams.</li>
                 <li>Facilitate multi‑stakeholder workshops (business, IT, vendor) to prioritize requests and resolve data discrepancies.</li>
-                <li>Implement data‑quality monitoring indicators, based on business rules and ALCOA+, within Nodhos and at the interface with UniQuality and Unidata, to minimize inconsistencies and improve supply chain efficiency.</li>
-                <li>Support Unidata–Nodhos linkage projects: requirements gathering, functional specs, coordination with IT/vendor, test scenarios, Agile deployments, risk mitigation on data flows.</li>
+                <li>Implement data‑quality monitoring indicators, based on business rules and ALCOA+, to minimize inconsistencies and improve supply chain efficiency.</li>
+                <li>Support linkage projects: requirements gathering, functional specs, coordination with IT/vendor, test scenarios, Agile deployments, risk mitigation on data flows.</li>
               </ul>
             </article>
 
@@ -1111,143 +977,9 @@
 
       <footer>
         <span id="footer-text">
-          CV — Arthur Mbomo • Data Quality, Governance & Integration • MSF Supply
+          CV — Arthur Mbomo • Data Quality, Governance & Integration
         </span>
       </footer>
-    </div>
-  </div>
-
-  <!-- MODALE LETTRE DE MOTIVATION (FR/EN intégrées) -->
-  <div id="letter-modal">
-    <div id="letter-backdrop"></div>
-    <div id="letter-box">
-      <div id="letter-header">
-        <span id="letter-title">Lettre de motivation — Data Integration Analyst (SPINCO)</span>
-        <button id="letter-close" type="button">×</button>
-      </div>
-      <div id="letter-content">
-        <!-- Version FR -->
-        <div class="letter-body" id="letter-fr">
-          <div class="letter-header">
-            <div>
-              <strong>Arthur Mbomo</strong><br />
-              Avenue François Sebrechts 63<br />
-              1080 Koekelberg, Bruxelles — Belgique<br />
-              Tél. : +32 467 756 284<br />
-              E-mail : arthursmay@yahoo.fr
-            </div>
-            <div>
-              Bruxelles, le <span id="date-fr"></span><br /><br />
-              À l’attention de :<br />
-              Hiring Manager — SPINCO / MSF International
-            </div>
-          </div>
-
-          <h2>Candidature — Data Integration Analyst (SPINCO)</h2>
-
-          <p>
-            Actuellement <strong>Data Quality Analyst</strong> chez <strong>MSF Supply</strong>, au cœur des interactions entre <strong>Nodhos</strong>, <strong>UniQuality</strong> et <strong>Unidata</strong>, je souhaite me porter candidat au poste de <strong>Data Integration Analyst</strong> au sein de l’équipe <strong>SPINCO</strong>. Ce rôle représente pour moi la continuité logique de mon parcours : mettre mon expertise en qualité, intégration et gouvernance des données au service d’une meilleure interopérabilité des systèmes du mouvement MSF.
-          </p>
-
-          <p>
-            Au sein de MSF Supply, j’occupe un rôle d’<strong>Analyste Gouvernance & Intégration de données</strong> : je traduis les besoins métier en exigences fonctionnelles et techniques pour l’IT, je contribue à la définition et au suivi de <strong>KPI qualité</strong> pour Nodhos et inter-Nodhos Uni(data/Quality), et je participe activement aux projets de linkage entre les systèmes (notamment <strong>Unidata–Nodhos</strong>). Cette position me place déjà très près du périmètre de SPINCO, de ses solutions et de ses enjeux : qualité et structuration des données article, interopérabilité des plateformes, support aux utilisateurs et mise en cohérence des référentiels au niveau du mouvement.
-          </p>
-
-          <p>
-            Mon travail quotidien m’amène à <strong>analyser des flux d’intégration</strong>, à documenter les règles de transformation et à collaborer avec des équipes techniques (développeurs, data engineers, fournisseurs comme Spinco) pour fiabiliser les échanges entre systèmes. Je contribue à la rédaction de <strong>spécifications fonctionnelles</strong>, de scénarios de test et à la résolution des incidents d’intégration, tout en gardant une vision métier : impact sur la supply chain, sur la visibilité article, sur la performance opérationnelle. Cette double posture business / technique est au cœur du rôle de Data Integration Analyst décrit dans l’offre.
-          </p>
-
-          <p>
-            Sur le plan analytique, je maîtrise les outils de <strong>data analysis</strong> et de <strong>visualisation</strong> attendus pour le poste : création de dashboards et d’indicateurs de pilotage avec <strong>Power BI</strong>, analyses de cohérence et de qualité des données (profilage, détection d’anomalies, suivi d’indicateurs), utilisation avancée d’<strong>Excel</strong>, <strong>Power Query</strong> et <strong>SQL</strong>. Je suis également formé aux concepts de <strong>data governance</strong>, de <strong>data lineage</strong> et de <strong>data stewardship</strong> (EPHEC, Jedha, ICHEC), ce qui me permet de comprendre les exigences de conformité, de sécurité et de traçabilité associées aux données produits.
-          </p>
-
-          <p>
-            L’offre mentionne la nécessité de <strong>collaborer étroitement avec les Business Analysts, les équipes techniques et les parties prenantes métier</strong>, dans un environnement international et en mode projet (Agile). C’est précisément le contexte dans lequel j’évolue aujourd’hui : animation de workshops multi‑acteurs, gestion des attentes des utilisateurs, vulgarisation de sujets techniques, rédaction de documentation (data mappings, règles d’intégration, procédures), et suivi régulier avec le management sur les risques, priorités et statuts des projets.
-          </p>
-
-          <p>
-            Au‑delà des compétences techniques, ce qui me motive profondément est la vocation de <strong>SPINCO</strong> : agir comme source centrale et fiable d’information produit pour l’ensemble du mouvement, et ainsi soutenir concrètement les projets médicaux de MSF dans le monde. Contribuer à améliorer l’interopérabilité entre UniData, UniQuality, UniLocal, MSL et les outils des OC/ESC, c’est pour moi un moyen direct d’augmenter l’efficacité collective et la capacité de MSF à délivrer les bons produits, au bon moment, sur le terrain.
-          </p>
-
-          <p>
-            Rigoureux, curieux et orienté solution, je suis à l’aise dans les environnements collaboratifs et interculturels. Mon expérience actuelle, ma connaissance des systèmes de la supply MSF et ma spécialisation en <strong>qualité & intégration de données</strong> font de moi un candidat opérationnel rapidement pour ce poste de Data Integration Analyst.
-          </p>
-
-          <p>
-            Je serais très heureux de pouvoir échanger avec vous pour détailler mes réalisations actuelles, ma vision de l’intégration de données au sein du mouvement, et la manière dont je pourrais contribuer au développement des services SPINCO.
-          </p>
-
-          <div class="signature-block">
-            <p>Je vous remercie pour l’attention portée à ma candidature et reste à votre disposition pour toute information complémentaire.</p>
-
-            <p>Veuillez agréer, Madame, Monsieur, l’expression de mes salutations distinguées.</p>
-
-            <p class="signature-name">Arthur Mbomo</p>
-            <p class="contact-line">Tél. : +32 467 756 284 — E-mail : arthursmay@yahoo.fr</p>
-          </div>
-        </div>
-
-        <!-- Version EN -->
-        <div class="letter-body" id="letter-en" style="display:none;">
-          <div class="letter-header">
-            <div>
-              <strong>Arthur Mbomo</strong><br />
-              Avenue François Sebrechts 63<br />
-              1080 Koekelberg, Brussels — Belgium<br />
-              Tel: +32 467 756 284<br />
-              E-mail: arthursmay@yahoo.fr
-            </div>
-            <div>
-              Brussels, <span id="date-en"></span><br /><br />
-              To the attention of:<br />
-              Hiring Manager — SPINCO / MSF International
-            </div>
-          </div>
-
-          <h2>Application — Data Integration Analyst (SPINCO)</h2>
-
-          <p>
-            I am currently working as a <strong>Data Quality Analyst</strong> at <strong>MSF Supply</strong>, at the core of interactions between <strong>Nodhos</strong>, <strong>UniQuality</strong> and <strong>Unidata</strong>. I would like to formally apply for the position of <strong>Data Integration Analyst</strong> within the <strong>SPINCO</strong> team. This role is the natural continuation of my current responsibilities: leveraging my expertise in data quality, integration and governance to strengthen interoperability of systems across the MSF movement.
-          </p>
-
-          <p>
-            In my current role, I act as a <strong>Data Governance & Integration Analyst</strong>: I translate business needs into functional and technical requirements for IT, help define and monitor <strong>quality KPIs</strong> for Nodhos and inter-Nodhos Uni(Data/Quality), and actively contribute to linkage projects between systems (notably <strong>Unidata–Nodhos</strong>). This already places me very close to SPINCO’s scope, solutions and challenges: structured and reliable article data, platform interoperability, user support and alignment of reference data at movement level.
-          </p>
-
-          <p>
-            On a daily basis, I <strong>analyse integration flows</strong>, document transformation rules and collaborate with technical teams (developers, data engineers, vendors such as Spinco) to secure system‑to‑system exchanges. I contribute to <strong>functional specifications</strong>, test scenarios and incident resolution, while keeping a strong business focus: impact on the supply chain, on article visibility and on operational performance. This dual business/technical profile is exactly what you describe for the Data Integration Analyst position.
-          </p>
-
-          <p>
-            From an analytical standpoint, I master the <strong>data analysis</strong> and <strong>visualisation</strong> tools required for the role: design of dashboards and control indicators with <strong>Power BI</strong>, data consistency and quality checks (profiling, anomaly detection, KPI monitoring), advanced use of <strong>Excel</strong>, <strong>Power Query</strong> and <strong>SQL</strong>. I have also been trained in <strong>data governance</strong>, <strong>data lineage</strong> and <strong>data stewardship</strong> (EPHEC, Jedha, ICHEC), which allows me to understand the governance, security and traceability requirements associated with product information.
-          </p>
-
-          <p>
-            Your job description emphasises close collaboration with <strong>Business Analysts, technical teams and business stakeholders</strong>, in an international and project‑based (Agile) environment. This is exactly the context I operate in today: facilitating multi‑stakeholder workshops, managing user expectations, translating technical topics into business language, producing documentation (data mappings, integration rules, procedures), and providing regular updates to leadership on risks, priorities and project status.
-          </p>
-
-          <p>
-            Beyond technical skills, what motivates me most is SPINCO’s <strong>purpose</strong>: acting as the central and trusted source of product information for the movement, and thereby directly supporting MSF’s medical projects worldwide. Contributing to better interoperability between UniData, UniQuality, UniLocal, MSL and OC/ESC tools is, in my view, a very concrete way to increase collective efficiency and strengthen MSF’s ability to deliver the right products, at the right time, to the right teams in the field.
-          </p>
-
-          <p>
-            Rigorous, curious and solution‑oriented, I enjoy collaborative and multicultural environments. My current experience, my knowledge of MSF supply systems and my specialisation in <strong>data quality & integration</strong> would allow me to be quickly operational and bring tangible value as a Data Integration Analyst in SPINCO.
-          </p>
-
-          <p>
-            I would be glad to discuss my experience, current achievements and how I could contribute to SPINCO’s services and to MSF’s broader data integration and interoperability ambitions.
-          </p>
-
-          <div class="signature-block">
-            <p>Thank you very much for considering my application. I remain at your disposal for any further information.</p>
-
-            <p>Yours faithfully,</p>
-
-            <p class="signature-name">Arthur Mbomo</p>
-            <p class="contact-line">Tel: +32 467 756 284 — E-mail: arthursmay@yahoo.fr</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -1256,7 +988,6 @@
     const btnEn = document.getElementById('btn-en');
     const btnTheme = document.getElementById('btn-theme');
     const btnPrint = document.getElementById('btn-print');
-    const btnLetter = document.getElementById('btn-letter');
 
     const cvFr = document.getElementById('cv-fr');
     const cvEn = document.getElementById('cv-en');
@@ -1265,33 +996,6 @@
     const headlineTag = document.getElementById('headline-tag');
     const footerText = document.getElementById('footer-text');
     const bannerMainText = document.getElementById('banner-main-text');
-
-    const letterModal = document.getElementById('letter-modal');
-    const letterBackdrop = document.getElementById('letter-backdrop');
-    const letterClose = document.getElementById('letter-close');
-    const letterBodyFr = document.getElementById('letter-fr');
-    const letterBodyEn = document.getElementById('letter-en');
-    const letterTitle = document.getElementById('letter-title');
-
-    function formatDateFR(date) {
-      return date.toLocaleDateString('fr-FR', {
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric'
-      });
-    }
-
-    function formatDateEN(date) {
-      return date.toLocaleDateString('en-GB', {
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric'
-      });
-    }
-
-    const now = new Date();
-    document.getElementById('date-fr').textContent = formatDateFR(now);
-    document.getElementById('date-en').textContent = formatDateEN(now);
 
     function setLang(lang) {
       if (lang === 'fr') {
@@ -1302,9 +1006,9 @@
         btnFr.classList.add('active');
         btnEn.classList.remove('active');
         document.documentElement.lang = 'fr';
-        headlineTag.textContent = 'Data Analyst au service de la mission MSF';
+        headlineTag.textContent = 'Data Analyst spécialisé en qualité & intégration de données';
         footerText.textContent =
-          'CV — Arthur Mbomo • Data Quality, Governance & Integration • MSF Supply';
+          'CV — Arthur Mbomo • Data Quality, Governance & Integration';
         bannerMainText.textContent = 'Profil, expériences & formation';
       } else {
         cvFr.style.display = 'none';
@@ -1314,9 +1018,9 @@
         btnFr.classList.remove('active');
         btnEn.classList.add('active');
         document.documentElement.lang = 'en';
-        headlineTag.textContent = 'Data Analyst supporting MSF mission & vision';
+        headlineTag.textContent = 'Data Analyst specialised in data quality & integration';
         footerText.textContent =
-          'CV — Arthur Mbomo • Data Quality, Governance & Integration • MSF Supply';
+          'CV — Arthur Mbomo • Data Quality, Governance & Integration';
         bannerMainText.textContent = 'Profile, experience & education';
       }
     }
@@ -1331,35 +1035,13 @@
     btnEn.addEventListener('click', () => setLang('en'));
     btnTheme.addEventListener('click', toggleTheme);
 
-    // Impression PDF : CV FR + thème clair
+    // Impression PDF : FR + thème clair
     btnPrint.addEventListener('click', () => {
       document.body.classList.remove('dark');
       btnTheme.textContent = 'Dark';
       setLang('fr');
       setTimeout(() => window.print(), 100);
     });
-
-    // Ouverture de la lettre dans la modale, en gardant la langue actuelle
-    btnLetter.addEventListener('click', () => {
-      const isFr = btnFr.classList.contains('active');
-      if (isFr) {
-        letterBodyFr.style.display = 'block';
-        letterBodyEn.style.display = 'none';
-        letterTitle.textContent = 'Lettre de motivation — Data Integration Analyst (SPINCO)';
-      } else {
-        letterBodyFr.style.display = 'none';
-        letterBodyEn.style.display = 'block';
-        letterTitle.textContent = 'Cover letter — Data Integration Analyst (SPINCO)';
-      }
-      letterModal.style.display = 'block';
-    });
-
-    function closeLetterModal() {
-      letterModal.style.display = 'none';
-    }
-
-    letterClose.addEventListener('click', closeLetterModal);
-    letterBackdrop.addEventListener('click', closeLetterModal);
   </script>
 </body>
 </html>
